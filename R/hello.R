@@ -22,7 +22,7 @@ addOne <- function(x) {
 #' @export
 #'
 #' @return A TestClass object
-R.oo::setConstructorS3("TestClass",
+setConstructorS3("TestClass",
                  function() { R.oo::extend(R.oo::Object(), "TestClass") })
 
 #' A test function
@@ -40,7 +40,7 @@ testFunc <- function(this) {
 #' @rdname testFunc
 #' @name testFunc.TestClass
 #' @export
-R.methodsS3::setMethodS3("testFunc", "TestClass", function(this) {
+setMethodS3("testFunc", "TestClass", function(this) {
   return(1)
 },appendVarArgs = F)
 
